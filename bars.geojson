@@ -1,0 +1,42 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "id": 472430680, "properties": { "timestamp": "2009-08-23T21:09:05Z", "user": "soycamo", "tags": "\"amenity\"=\"bar\",\"building\"=\"yes\",\"name\"=\"Crush\"", "name": "Crush", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6514493, 45.5170824 ] } }
+,
+{ "type": "Feature", "id": 512757541, "properties": { "timestamp": "2012-10-06T23:10:11Z", "user": "Mele Sax-Barnett", "tags": "\"amenity\"=\"bar\",\"cuisine\"=\"hawaiian\",\"name\"=\"Hale Pele\"", "name": "Hale Pele", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6373348, 45.5352982 ] } }
+,
+{ "type": "Feature", "id": 661311320, "properties": { "timestamp": "2011-03-21T04:42:04Z", "user": "Dion Dock", "tags": "\"addr:housenumber\"=\"1210\",\"addr:street\"=\"Hoyt Street\",\"amenity\"=\"bar\",\"cuisine\"=\"latino\",\"name\"=\"Oba!\"", "name": "Oba!", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6834865, 45.5270366 ] } }
+,
+{ "type": "Feature", "id": 663797630, "properties": { "timestamp": "2010-03-10T19:30:39Z", "user": "balrog-kun", "tags": "\"amenity\"=\"bar\",\"note\"=\"TODO\"", "name": "", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.676247, 45.5234524 ] } }
+,
+{ "type": "Feature", "id": 689565399, "properties": { "timestamp": "2010-04-08T23:24:50Z", "user": "gepr", "tags": "\"amenity\"=\"bar\",\"name\"=\"Ladd's Inn\"", "name": "Ladd's Inn", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.65336360000001, 45.5113797 ] } }
+,
+{ "type": "Feature", "id": 810983831, "properties": { "timestamp": "2010-07-11T05:33:52Z", "user": "rafamoustafah", "tags": "\"amenity\"=\"bar\",\"name\"=\"Groove Suite\"", "name": "Groove Suite", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6749056, 45.5265114 ] } }
+,
+{ "type": "Feature", "id": 937462769, "properties": { "timestamp": "2010-10-04T06:40:34Z", "user": "rafamoustafah", "tags": "\"amenity\"=\"bar\",\"name\"=\"Saucebox\"", "name": "Saucebox", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.677814, 45.5224096 ] } }
+,
+{ "type": "Feature", "id": 937462771, "properties": { "timestamp": "2010-10-04T06:40:34Z", "user": "rafamoustafah", "tags": "\"amenity\"=\"bar\",\"description\"=\"strip bar\",\"name\"=\"Mary's Club\"", "name": "Mary's Club", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6778113, 45.5227647 ] } }
+,
+{ "type": "Feature", "id": 937462775, "properties": { "timestamp": "2010-10-04T06:40:34Z", "user": "rafamoustafah", "tags": "\"amenity\"=\"bar\",\"name\"=\"Tiger Bar\"", "name": "Tiger Bar", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6776638, 45.5253805 ] } }
+,
+{ "type": "Feature", "id": 1234799977, "properties": { "timestamp": "2011-04-06T15:30:37Z", "user": "sexistential", "tags": "\"addr:housenumber\"=\"18 NW 3rd Ave\",\"addr:postcode\"=\"97209\",\"amenity\"=\"bar\",\"name\"=\"Tube\"", "name": "Tube", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.673211, 45.5234917 ] } }
+,
+{ "type": "Feature", "id": 1234800640, "properties": { "timestamp": "2011-04-06T15:32:39Z", "user": "sexistential", "tags": "\"addr:housenumber\"=\"20 NW 3rd Ave\",\"addr:postcode\"=\"97209\",\"amenity\"=\"bar\",\"name\"=\"Yes and No\"", "name": "Yes and No", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6732169, 45.5235672 ] } }
+,
+{ "type": "Feature", "id": 1947933641, "properties": { "timestamp": "2012-10-05T18:09:25Z", "user": "Mele Sax-Barnett", "tags": "\"amenity\"=\"bar\",\"name\"=\"Jade Lounge\"", "name": "Jade Lounge", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6417294, 45.5220511 ] } }
+,
+{ "type": "Feature", "id": 1947933646, "properties": { "timestamp": "2012-10-06T23:10:11Z", "user": "Mele Sax-Barnett", "tags": "\"amenity\"=\"bar\",\"name\"=\"Pour\"", "name": "Pour", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6368607, 45.5352992 ] } }
+,
+{ "type": "Feature", "id": 1947949881, "properties": { "timestamp": "2012-10-05T18:29:09Z", "user": "Mele Sax-Barnett", "tags": "\"amenity\"=\"bar\",\"name\"=\"B--Side\"", "name": "B-Side", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6589606, 45.5227756 ] } }
+,
+{ "type": "Feature", "id": 1947949896, "properties": { "timestamp": "2012-10-05T18:29:10Z", "user": "Mele Sax-Barnett", "tags": "\"amenity\"=\"bar\",\"name\"=\"Rontoms\"", "name": "Rontoms", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6595358, 45.5227737 ] } }
+,
+{ "type": "Feature", "id": 1960022511, "properties": { "timestamp": "2012-10-12T06:43:57Z", "user": "coleman", "tags": "\"addr:city\"=\"Portland\",\"addr:country\"=\"US\",\"addr:housenumber\"=\"50\",\"addr:postcode\"=\"97204\",\"addr:state\"=\"OR\",\"addr:street\"=\"Southwest Morrison Street\",\"amenity\"=\"bar\",\"atm\"=\"no\",\"food\"=\"yes\",\"internet_access\"=\"wlan\",\"name\"=\"H50 Bistro & Bar\",\"outdoor_seating\"=\"no\",\"phone\"=\"503--484--1415\",\"smoking\"=\"outside\",\"source\"=\"Pushpin for iOS\"", "name": "H50 Bistro & Bar", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6731712, 45.5174136 ] } }
+,
+{ "type": "Feature", "id": 1964073284, "properties": { "timestamp": "2012-10-14T07:46:13Z", "user": "tbrenneman", "tags": "\"addr:city\"=\"Portland\",\"addr:country\"=\"US\",\"addr:housenumber\"=\"720\",\"addr:postcode\"=\"97214\",\"addr:state\"=\"OR\",\"addr:street\"=\"Southeast Sandy\",\"amenity\"=\"bar\",\"name\"=\"Rum Club\",\"phone\"=\"+1 503 4672469\",\"website\"=\"http:\/\/rumclubpdx.com\/\",\"wheelchair\"=\"limited\"", "name": "Rum Club", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.657848, 45.519148 ] } }
+,
+{ "type": "Feature", "id": 1967622855, "properties": { "timestamp": "2012-10-15T22:51:34Z", "user": "Grant Humphries", "tags": "\"amenity\"=\"bar\",\"gambling\"=\"yes\",\"name\"=\"Encore Club\"", "name": "Encore Club", "place": "", "highway": "", "landuse": "", "waterway": "", "railway": "", "amenity": "bar", "tourism": "", "learning": "" }, "geometry": { "type": "Point", "coordinates": [ -122.6874759, 45.5269722 ] } }
+
+]
+}
