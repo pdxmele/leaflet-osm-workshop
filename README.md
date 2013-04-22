@@ -1,12 +1,12 @@
-OSM-Leaf-example
+leaflet-osm-workshop
 ================
 
-Example web map code for an OpenStreetMap/Leaflet workshop I'm helping to lead.
+Example web map code & slides for a Leaflet/OSM workshop I'm helping to lead at GIS in Action (and have co-led in the past at NACIS 2012)
 
-Presentation slides at http://pdxmele.github.com/OSM-Leaf-example/OSMslides.pdf
+Presentation slides at http://pdxmele.com/leaflet-osm-workshop/OSMslides.pdf
 
-HTML & JS versions ready to start tutorial with, built from code by Wm Leler at http://pdxmele.github.com/OSM-Leaf-example/osmLeaf.html
+HTML & JS versions ready to start tutorial with, built from code by Wm Leler at http://pdxmele.com/leaflet-osm-workshop/osmLeaf.html
 
-Completed exercise version (NO PEEKING!!): http://pdxmele.github.com/OSM-Leaf-example/complete/osmLeaf-complete.html
+Completed exercise version (DON'T PEEK!!): http://pdxmele.com/leaflet-osm-workshop/complete/osmLeaf-complete.html
 
-[Includes a Leaflet and jQuery dist]
+Includes dists of [Leaflet](https://github.com/leaflet) and [jQuery](http://jquery.com/), the use of which is subject to their own licenses.
