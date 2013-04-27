@@ -43,13 +43,15 @@
   $(document).ready(function() {
 
     var map = L.map('map_div', {
-      center: [45.521115, -122.673383],
-      zoom: 14,
+      center: [45.521115, -122.673383], //this was changed
+      zoom: 14, //this was changed too
       attributionControl: false,
       layers: defaultlayers
     });
 
     map.addControl(layercontrol).addControl(attributioncontrol).addControl(scalecontrol);
+
+    //beginning of new code
 
     $.getJSON('cafes.geojson', parseCafes);
     $.getJSON('bars.geojson', parseBars);
@@ -62,6 +64,7 @@
       opacity: 1,
       fillOpacity: 0.8
     };
+
     var barStyle = {
       radius: 6,
       fillColor: "#ff33ff",
@@ -96,6 +99,8 @@
       layercontrol.addOverlay(barlayer, 'bars');
       map.addLayer(barlayer);
     }
+
+    //end of new code
 
   });
 
