@@ -1,87 +1,102 @@
-// osmLeaf.js NACIS Workshop OSM Example
+// osmLeaf-complete.js Completed code for OSM section - GIS in Action Workshop
 
 (function($){
 
-	var osmtiles = L.tileLayer( // open street map tiles via MapQuest Open
-		'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg',
-		{ subdomains: '1234',
-			attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a> and © <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap contributors</a>'
-	});
-	var sattiles = L.tileLayer( // NASA satellite tiles via MapQuest Open
-		'http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg',
-		{ subdomains: '1234',
-			attribution: 'Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency'
-	});
-	var weather = L.tileLayer.wms( // Composite Weather Radar via Iowa State (WMS)
-		"http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
-		{ layers: 'nexrad-n0r-900913',
-	    format: 'image/png',
-	    transparent: true,
-	    opacity: 0.4,
-	    attribution: "Weather data © 2012 IEM Nexrad"
-	});
+  var osmtiles = L.tileLayer( // open street map tiles via MapQuest Open
+    'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg',
+    { subdomains: '1234',
+      attribution: '<a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA 2.0</a> <a href="http://open.mapquest.com" target="_blank">MapQuest</a>, &copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
+  });
+  var sattiles = L.tileLayer( // NASA satellite tiles via MapQuest Open
+    'http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg',
+    { subdomains: '1234',
+      attribution: '<a href="http://onearth.jpl.nasa.gov" target="_blank">NASA/JPL-Caltech</a> and <a href="http://www.fsa.usda.gov/FSA/apfoapp?area=home&subject=prog&topic=nai" target="_blank">U.S. Depart. of Agriculture, Farm Service Agency</a>'
+  });
+  var weather = L.tileLayer.wms( // Composite Weather Radar via Iowa State (WMS)
+    "http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi",
+    { layers: 'nexrad-n0r-900913',
+      format: 'image/png',
+      transparent: true,
+      opacity: 0.4,
+      attribution: "Weather data &copy; 2012 IEM Nexrad"
+  });
+  var streetoverlay = L.tileLayer(
+    'http://otile{s}.mqcdn.com/tiles/1.0.0/hyb/{z}/{x}/{y}.png',
+    { subdomains: '1234',
+      attribution: '<a href="http://creativecommons.org/licenses/by-sa/2.0/" target="_blank">CC-BY-SA 2.0</a> <a href="http://open.mapquest.com" target="_blank">MapQuest</a>, &copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors'
+  });
 
-	function onEachFeature(feature, layer) {
-    // grabs the property "name" and uses it for the popup
-    if (feature.properties && feature.properties.name) {
-        layer.bindPopup(feature.properties.name);
-    }}
+  var defaultlayers = [osmtiles];
 
-	var cafemarkers = {
-	    radius: 6,
-	    fillColor: "#ff7800",
-	    color: "#000",
-	    weight: 1,
-	    opacity: 1,
-	    fillOpacity: 0.8
-	};
-	var cafelayer = L.geoJson(cafes, {
-		pointToLayer: function (feature, latlng) {
-			return L.circleMarker(latlng, cafemarkers);
-		},
-		onEachFeature: onEachFeature
-	}); 
+  var layercontrol = L.control.layers(
+    { street: osmtiles, satelite: sattiles },
+    { radar: weather, streets: streetoverlay }
+  );
 
-	var barmarkers = {
-	    radius: 6,
-	    fillColor: "#ff33ff",
-	    color: "#000",
-	    weight: 1,
-	    opacity: 1,
-	    fillOpacity: 0.8
-	};
-	var barlayer = L.geoJson(bars, {
-		pointToLayer: function (feature, latlng) {
-			return L.circleMarker(latlng, barmarkers);
-		},
-		onEachFeature: onEachFeature
-	});
+  var scalecontrol = L.control.scale();
 
-	var defaultlayers = [osmtiles, weather];
+  var attributioncontrol = L.control.attribution({ prefix: false });
+  $.each(defaultlayers, function(i, v) {
+    attributioncontrol.addAttribution(v.getAttribution()); // not documented
+  });
+  
+  $(document).ready(function() {
 
-	var layercontrol = L.control.layers(
-		{ street: osmtiles, satelite: sattiles },
-		{ radar: weather, cafes: cafelayer, bars: barlayer}
-	);
+    var map = L.map('map_div', {
+      center: [45.521115, -122.673383],
+      zoom: 14,
+      attributionControl: false,
+      layers: defaultlayers
+    });
 
-	var scalecontrol = L.control.scale();
+    map.addControl(layercontrol).addControl(attributioncontrol).addControl(scalecontrol);
 
-	var attributioncontrol = L.control.attribution({ prefix: false });
-	$.each(defaultlayers, function(i, v) {
-		attributioncontrol.addAttribution(v.getAttribution()); // not documented
-	});
-	
-	$(document).ready(function() {
+    $.getJSON('cafes.geojson', parseCafes);
+    $.getJSON('bars.geojson', parseBars);
 
-		var map = L.map('map_div', {
-			center: [45.521115,-122.673383],
-			zoom: 14,
-			zoomAnimation: false, // jump to new zoom
-			attributionControl: false,
-			layers: defaultlayers
-		});
-		map.addControl(layercontrol).addControl(attributioncontrol).addControl(scalecontrol);
+    var cafeStyle = {
+      radius: 6,
+      fillColor: "#ff7800",
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    };
+    var barStyle = {
+      radius: 6,
+      fillColor: "#ff33ff",
+      color: "#000",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.8
+    };
 
-	});
+    function parseCafes(data) {
+      var cafelayer = L.geoJson(data.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, cafeStyle);
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindPopup(feature.properties.name);
+        }
+      });
+      layercontrol.addOverlay(cafelayer, 'cafes');
+      map.addLayer(cafelayer);
+    }
+
+    function parseBars(data) {
+      var barlayer = L.geoJson(data.features, {
+        pointToLayer: function (feature, latlng) {
+          return L.circleMarker(latlng, barStyle);
+        },
+        onEachFeature: function(feature, layer) {
+          layer.bindPopup(feature.properties.name);
+        }
+      });
+      layercontrol.addOverlay(barlayer, 'bars');
+      map.addLayer(barlayer);
+    }
+
+  });
 
 }(jQuery));
