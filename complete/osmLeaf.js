@@ -53,9 +53,6 @@
 
     //beginning of new code
 
-    $.getJSON('cafes.geojson', parseCafes);
-    $.getJSON('bars.geojson', parseBars);
-
     var cafeStyle = {
       radius: 6,
       fillColor: "#ff7800",
@@ -73,6 +70,9 @@
       opacity: 1,
       fillOpacity: 0.8
     };
+
+    $.getJSON('cafes.geojson', parseCafes);
+    $.getJSON('bars.geojson', parseBars);
 
     function parseCafes(data) {
       var cafelayer = L.geoJson(data.features, {
