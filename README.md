@@ -9,4 +9,17 @@ HTML & JS versions ready to start tutorial with, built from code by Wm Leler at 
 
 Completed exercise version (DON'T PEEK!!): http://pdxmele.com/leaflet-osm-workshop/complete/osmLeaf.html
 
+###Supplemental Mac instructions:
+
+If you're trying to run these html files locally with Safari, unchanged from the download, you may need to do this first in Terminal:
+
+    cd complete/
+    xattr -dr com.apple.quarantine .
+    
+If you're trying to run them locally on Chrome, you'll need to close Chrome and reopen it from Terminal with:
+
+    open -a "Google Chrome" --args --allow-file-access-from-files
+
+###Other notes:
+
 Includes dists of [Leaflet](https://github.com/leaflet) and [jQuery](http://jquery.com/), the use of which is subject to their own licenses.
