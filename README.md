@@ -23,3 +23,5 @@ If you're trying to run them locally on Chrome, you'll need to close Chrome and 
 ###Other notes:
 
 Includes dists of [Leaflet](https://github.com/leaflet) and [jQuery](http://jquery.com/), the use of which is subject to their own licenses.
+
+If you like this, please consider donating on Gittip: https://www.gittip.com/pdxmele/
